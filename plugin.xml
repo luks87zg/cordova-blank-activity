@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="hr.intendanet.cordova.blank"
+        version="0.0.1">
+    <name>Blank</name>
+    <description>Cordova Blank Activity Plugin</description>
+    <keywords>cordova,blank,activity</keywords>
+    <repo>https://github.com/luks87zg/cordova-blank-activity.git</repo>
+
+    <js-module src="www/BlankActivity.js" name="BlankActivity">
+        <clobbers target="cordova.plugins.intendanet.BlankActivity" />
+    </js-module>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="BlankActivity" >
+                <param name="android-package" value="hr.intendanet.cordova.blank.BlankActivity"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/BlankActivity.java" target-dir="src/hr/intendanet/cordova/blank" />
+    </platform>
+
+</plugin>
