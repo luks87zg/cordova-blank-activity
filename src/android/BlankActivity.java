@@ -32,7 +32,7 @@ public class BlankActivity extends CordovaPlugin {
 
     protected void doNothing() {
         Log.d(LOG_TAG, "Empty plugin did absolutely nothing");
-            Intent intentEncode = new Intent(this.cordova.getActivity().getBaseContext(), EmptyActivity.class);
+            Intent intentEncode = new Intent(this.cordova.getActivity().getBaseContext(), EmptyActivity);
         // avoid calling other phonegap apps
         intentEncode.setPackage(this.cordova.getActivity().getApplicationContext().getPackageName());
         this.cordova.getActivity().startActivity(intentEncode);
