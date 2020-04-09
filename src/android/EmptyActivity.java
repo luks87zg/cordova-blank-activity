@@ -1,4 +1,4 @@
-package hr.intendanet.cordova.blank;
+package hr.intendanet.cordova.plugin.blank;
 
 import android.app.Activity;
 

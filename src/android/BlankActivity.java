@@ -1,8 +1,7 @@
-package hr.intendanet.cordova.blank;
+package hr.intendanet.cordova.plugin.blank;
 
 import android.app.Activity;
 import android.os.Bundle;
-import androidx.annotation.Nullable;
 
 import org.apache.cordova.Config;
 import org.apache.cordova.CallbackContext;
@@ -37,7 +36,7 @@ public class BlankActivity extends CordovaPlugin {
 
     protected void doNothing() {
         Log.d(LOG_TAG, "Empty plugin did absolutely nothing");
-        Intent intentEncode = new Intent(this.cordova.getActivity().getBaseContext(), EmptyActivity.class);
+            Intent intentEncode = new Intent(this.cordova.getActivity().getBaseContext(), EmptyActivity.class);
         // avoid calling other phonegap apps
         intentEncode.setPackage(this.cordova.getActivity().getApplicationContext().getPackageName());
         this.cordova.getActivity().startActivity(intentEncode);
