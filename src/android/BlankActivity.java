@@ -20,11 +20,6 @@ public class BlankActivity extends CordovaPlugin {
     protected static final String LOG_TAG = "BlankActivity";
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-     }
-
-    @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if (action.equals("doNothing")) {
             doNothing();
