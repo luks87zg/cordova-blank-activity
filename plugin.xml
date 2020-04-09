@@ -14,7 +14,7 @@
 
     <platform name="android">
   	    <framework src="libs/empty.gradle" custom="true" type="gradleReference" />
-        <resource-file src="libs/EmptyActivity.aar" target="libs/EmptyActivity.aar" />
+        <resource-file src="libs/EmptyActivity.aar" target="libs" />
     	<source-file src="src/android/BlankActivity.java" target-dir="src/hr/intendanet/cordova/plugin/blank" />
     </platform>
 
