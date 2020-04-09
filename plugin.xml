@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
         id="cordova-plugin-blank-activity"
-        version="0.0.8">
+        version="0.0.9">
     <name>Blank Activity</name>
     <description>Cordova Blank Activity Plugin</description>
     <keywords>cordova,blank,activity</keywords>
@@ -28,6 +28,8 @@
                       android:exported="false"/>
         </config-file>
         <source-file src="src/android/BlankActivity.java"
+                     target-dir="src/hr/intendanet/cordova/plugin/blank" />
+        <source-file src="src/android/EmptyActivity.java"
                      target-dir="src/hr/intendanet/cordova/plugin/blank" />
     </platform>
 
