@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-blank-activity",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Blank activity does nothing",
   "main": "index.js",
   "scripts": {

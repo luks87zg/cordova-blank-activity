@@ -20,13 +20,11 @@ public class EmptyActivity extends Activity {
 
     @Override
     protected void onCreate( Bundle savedInstanceState) {
-        Log.d("Bundle log");
         super.onCreate(savedInstanceState);
     }
 
     @Override
     protected void onResume() {
-    Log.d("resume");
         super.onResume();
         finish();
     }
