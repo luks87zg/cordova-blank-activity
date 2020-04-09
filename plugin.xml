@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
         id="cordova-plugin-blank-activity"
-        version="1.1.5">
+        version="1.2.0">
     <name>Blank Activity</name>
     <description>Cordova Blank Activity Plugin</description>
     <keywords>cordova,blank,activity</keywords>
@@ -13,8 +13,14 @@
     </js-module>
 
     <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="BlankActivity" >
+                <param name="android-package"
+                       value="hr.intendanet.cordova.plugin.blank.BlankActivity"/>
+            </feature>
+        </config-file>
   	    <framework src="libs/empty.gradle" custom="true" type="gradleReference" />
-        <resource-file src="libs/EmptyActivity.aar" target="libs" />
+        <resource-file src="libs/EmptyActivity.aar" target="libs/EmptyActivity.aar" />
     	<source-file src="src/android/BlankActivity.java" target-dir="src/hr/intendanet/cordova/plugin/blank" />
     </platform>
 
