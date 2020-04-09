@@ -18,7 +18,7 @@ import android.util.Log;
 public class EmptyActivity extends Activity {
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate( Bundle savedInstanceState) {
         Log.d("Bundle log");
         super.onCreate(savedInstanceState);
     }

@@ -20,7 +20,7 @@ public class BlankActivity extends CordovaPlugin {
     protected static final String LOG_TAG = "BlankActivity";
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
      }
 
