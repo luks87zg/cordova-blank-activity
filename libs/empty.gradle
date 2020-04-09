@@ -6,7 +6,6 @@ repositories{
    }
 }
 dependencies {
-    compile 'com.android.support:appcompat-v7:21.1.0'
     compile(name:'EmptyActivity', ext:'aar')
 }
 android {
