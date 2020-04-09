@@ -1,5 +1,9 @@
 package hr.intendanet.cordova.blank;
 
+import android.app.Activity;
+import android.os.Bundle;
+import androidx.annotation.Nullable;
+
 import org.apache.cordova.Config;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
@@ -14,15 +18,12 @@ import android.util.Log;
 
 public class BlankActivity extends CordovaPlugin {
 
-    protected static final String LOG_TAG = "PSSafeReload";
+    protected static final String LOG_TAG = "BlankActivity";
 
-    public Object onMessage(String id, Object data) {
-        if (id.equals("onPageFinished")) {
-            String currentUrl = (String)data;
-            Log.d(LOG_TAG, "PSEmpty pageDidLoad " + currentUrl);
-        }
-        return null;
-    }
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+     }
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
@@ -36,5 +37,9 @@ public class BlankActivity extends CordovaPlugin {
 
     protected void doNothing() {
         Log.d(LOG_TAG, "Empty plugin did absolutely nothing");
+        Intent intentEncode = new Intent(this.cordova.getActivity().getBaseContext(), EmptyActivity.class);
+        // avoid calling other phonegap apps
+        intentEncode.setPackage(this.cordova.getActivity().getApplicationContext().getPackageName());
+        this.cordova.getActivity().startActivity(intentEncode);
     }
 }

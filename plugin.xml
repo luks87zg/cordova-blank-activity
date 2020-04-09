@@ -9,7 +9,7 @@
     <repo>https://github.com/luks87zg/cordova-blank-activity.git</repo>
 
     <js-module src="www/BlankActivity.js" name="BlankActivity">
-        <clobbers target="cordova.plugins.intendanet.BlankActivity" />
+        <clobbers target="cordova.plugins.BlankActivity" />
     </js-module>
 
     <platform name="android">
@@ -18,7 +18,9 @@
                 <param name="android-package" value="hr.intendanet.cordova.blank.BlankActivity"/>
             </feature>
         </config-file>
-
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity android:name="hr.intendanet.cordova.blank.EmptyActivity" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden|screenSize" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:windowSoftInputMode="stateAlwaysHidden" android:exported="false"/>
+        </config-file>
         <source-file src="src/android/BlankActivity.java" target-dir="src/hr/intendanet/cordova/blank" />
     </platform>
 

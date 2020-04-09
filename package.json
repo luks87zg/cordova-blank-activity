@@ -1,0 +1,19 @@
+{
+  "name": "cordova-blank-activity",
+  "version": "1.0.0",
+  "description": "Blank activity does nothing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luks87zg/cordova-blank-activity.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luks87zg/cordova-blank-activity/issues"
+  },
+  "homepage": "https://github.com/luks87zg/cordova-blank-activity#readme"
+}
