@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
         id="cordova-plugin-blank-activity"
-        version="0.0.10">
+        version="0.0.11">
     <name>Blank Activity</name>
     <description>Cordova Blank Activity Plugin</description>
     <keywords>cordova,blank,activity</keywords>
@@ -20,7 +20,7 @@
             </feature>
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <activity android:name="hr.intendanet.cordova.plugin.blank.EmptyActivity"
+            <activity android:name="hr.intendanet.cordova.blanactivity.EmptyActivity"
                       android:clearTaskOnLaunch="true"
                       android:configChanges="orientation|keyboardHidden|screenSize"
                       android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
@@ -29,8 +29,8 @@
         </config-file>
         <source-file src="src/android/BlankActivity.java"
                      target-dir="src/hr/intendanet/cordova/plugin/blank" />
-        <source-file src="src/android/EmptyActivity.java"
-                     target-dir="src/hr/intendanet/cordova/plugin/blank" />
+	    <lib-file src="src/android/EmptyActivity.aar"
+                  target-dir="src/hr/intendanet/cordova/plugin/blank" />
     </platform>
 
 </plugin>
